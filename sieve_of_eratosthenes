@@ -1,0 +1,17 @@
+from sets import Set
+
+def sieve(limit):
+
+    set = Set()
+
+    for i in xrange(1, limit+1):
+        if i == 1:
+            print i
+            set.add(i)
+        else:
+            if i not in set:
+                print i
+                for j in xrange(i*i, limit+1, i):
+                    set.add(j)
+
+sieve(11)
